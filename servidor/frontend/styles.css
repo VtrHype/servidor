@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 5px;
+}
+
+#container {
+    background: #1e1e1e;
+    padding: 20px 20px 20px 10px;
+    border-radius: 8px;   
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 99%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.header label {
+    margin-right: 10px;
+}
+
+.field-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.field-group label {
+    margin-right: 10px;
+}
+
+.field-group input {
+    margin-right: 10px;
+}
+
+input, select {
+    background: #53535386;
+    color: #ffffff;
+    border: 1px solid #302f2f;
+    border-radius: 4px;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#rondas_tabela {
+    margin: 1px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr {
+    border: 1px solid #00000000;
+}
+table, th, td {
+    border: 1px solid #444444;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background: #2e2e2e;
+}
+
+.motivo_disparo {
+    width: 100%;
+    max-width: 300px; /* ajuste conforme necessário */
+    padding: 8px;
+    border-radius: 5px;
+}
+
+/* Estilo para telas menores */
+@media screen and (max-width: 600px) {
+    .motivo_disparo {
+        max-width: 100%;
+    }
+}
+ 
+
+
+.minha_classe {
+    background-image: url('imgStv.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.minha_classe td {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.minha_classe label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.btn {
+    width: 135px;
+    background-color: #0f3610;
+    border: 1px solid rgba(255, 166, 0, 0.877);
+    color: white;
+    margin: 10px;
+    padding: 10px 15px;    
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0d5312;
+}
+
+#h_saida {
+    display: none;
+    width: 100%;
+}
+.linha {
+    color: rgba(255, 166, 0, 0.877);
+    border: solid 1px rgba(255, 166, 0, 0.877);    
+    width: 100%;
+    bottom: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    
+}

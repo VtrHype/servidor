@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Rondas</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+
+</head>
+<body>
+    <div id="container">
+        <h1>Relatório de Rondas</h1>
+
+        <div class="header">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" style="text-transform: uppercase;">
+            <label for="matricula">&nbsp;&nbsp;Matrícula:</label>
+            <input type="text" id="matricula" inputmode="numeric" pattern="[0-9]*">
+
+        </div>
+        <div class="field-group">
+            <label for="data">Data:</label>
+            <input type="text" id="data" readonly >
+            <label for="placa">Placa:</label>
+            <input type="text" id="placa" style="text-transform: uppercase;">
+        </div>
+        <div class="field-group">
+            <label for="kmInicio">Km Início:</label>
+            <input type="text" id="kmInicio" inputmode="numeric" pattern="[0-9]*">
+            <label for="kmFinal">Km Final:</label>
+            <input type="text" id="kmFinal" inputmode="numeric" pattern="[0-9]*">
+        </div>
+
+        <table id="rondas_tabela" >
+            <tbody id="in">
+                <tr class="minha_classe">
+                    <td>
+                        <label for="cliente">Cliente</label>
+                        <input type="text" class="cliente" id="cliente" style="text-transform: uppercase;">
+                    </td>
+                    
+                    <td>
+                        <label for="contato_local">Contato no Local</label>
+                        <input type="text" class="contato_local" id="contato_local" style="text-transform: uppercase;">
+                    </td>
+                    <td>
+                        <label for="motivo_disparo">Motivo</label>
+                        <select class="motivo_disparo" id="motivo_disparo" style="text-transform: uppercase;">
+                            <option>Selecione</option>
+                            
+                            <option>Ronda</option>
+                            <option>Ronda Interna</option>
+                            <option>Entrega de Equipamentos</option>
+                            <option>Alarme</option>
+                            <option>Atendimento Solicitado</option>
+                            <option>Pânico</option>
+                            <option>PB</option>
+                            <option>QAP</option>
+                            <option>Rendição QRF</option>
+                            <option>Trocar de Moto</option>
+                            <option>Manutenção Moto</option>
+                            <option>Alteração no Local</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label for="descricao">Descrição</label>
+                        <input type="text" class="descricao" id="descricao" style="text-transform: uppercase;">
+                    </td>
+                    
+                    <td>
+                        <label for="h_chegada">Horário de Chegada</label>
+                        <input type="time" class="h_chegada" id="h_chegada" style="text-transform: uppercase; display: none;">
+                    </td>
+                    <td class="btn-container">
+                        <label for="h_saida">Horário de Saída</label>
+                        <input type="time" class="h_saida" id="h_saida" style="text-transform: uppercase; display: none;">
+                        <button class="btn finalizar-ronda">Finalizar Ronda</button>
+                    </td>
+                    
+                </tr>
+            </tbody>
+        </table>
+        <button id="add-row" class="btn">Adicionar Linha</button>
+        <button id="finalizar-turno" class="btn">Finalizar Turno</button>
+     
+    </div>
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>
